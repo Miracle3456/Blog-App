@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: django-blog
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate --noinput
+    startCommand: gunicorn blog_project.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: blog_project.settings
+      # Add your other environment variables here
