@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%extends 'base.html'%}
+    <title></title>
+</head>
+<body>
+    {%block content%}
+        {%for post in object_list%}
+    <div class = 'post-entry'>
+        
+        <a href="{%url 'post_detail' post.pk%}"><h2>{{post.title}}</h2></a>
+        <a href="{%url 'post_detail' post.pk%}"><p>
+            
+            {{post.body}}
+        </p></a>
+        
+    </div>
+    {%endfor%}
+    {%endblock%}
+</body>
+</html>
