@@ -1,39 +1,96 @@
+/* Base styles */
 body {
-    font-family: sans-serif;
-    font-size: 18px;
-}
-header {
-    border-bottom: 1px solid ;
-    margin-bottom: 2rem;
-    display : flex;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #f7f9fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
 
-header h1 a {
-    color: red;
+header, footer {
+    background: #22223b;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(34, 34, 59, 0.08);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #22223b;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #4f8cff;
     text-decoration: none;
+    transition: color 0.2s;
 }
-.nav-left {
-    margin-right: auto;
+
+a:hover {
+    color: #22223b;
+    text-decoration: underline;
 }
-.nav-right {
-    display: flex;
-    padding-top: 2rem;
+
+button, .btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
 }
-.post-entry {
-    margin-bottom: 0rem;
+
+button:hover, .btn:hover {
+    background: #22223b;
 }
-.post-entry h2 {
-margin: 0rem;
+
+.card {
+    background: #f3f6fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(34, 34, 59, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
 }
-.post-entry h2 a,
-.post-entry h2 a:visited {
-    color: blue;
-    text-decoration: none;
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(34, 34, 59, 0.12);
 }
-.post-entry p {
-    margin: 0;
-    font-weight: 400;
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f7f9fb;
+    transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4f8cff;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
     }
-.post-entry h2 a:hover {
-color: red;
+    h1 {
+        font-size: 1.5rem;
+    }
 }
